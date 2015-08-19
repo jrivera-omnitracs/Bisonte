@@ -1,0 +1,7 @@
+C:\Users\Portatil en Stock 23\Documents\GitHub\Omnireports2\Omnireports2\bin\Release\Omnireports2.exe
+C:\Users\Portatil en Stock 23\Documents\GitHub\Omnireports2\Omnireports2\bin\Release\Omnireports2.pdb
+C:\Users\Portatil en Stock 23\Documents\GitHub\Omnireports2\Omnireports2\obj\x86\Release\Omnireports2.Properties.Resources.resources
+C:\Users\Portatil en Stock 23\Documents\GitHub\Omnireports2\Omnireports2\obj\x86\Release\Omnireports2.Vistas.frmRepCC.resources
+C:\Users\Portatil en Stock 23\Documents\GitHub\Omnireports2\Omnireports2\obj\x86\Release\Omnireports2.csproj.GenerateResource.Cache
+C:\Users\Portatil en Stock 23\Documents\GitHub\Omnireports2\Omnireports2\obj\x86\Release\Omnireports2.exe
+C:\Users\Portatil en Stock 23\Documents\GitHub\Omnireports2\Omnireports2\obj\x86\Release\Omnireports2.pdb

@@ -1,0 +1,9 @@
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesPotosinos\Reportes-Potosinos\Omnireports2\bin\Release\ReportesPotosinos.exe.config
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesPotosinos\Reportes-Potosinos\Omnireports2\bin\Release\ReportesPotosinos.exe
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesPotosinos\Reportes-Potosinos\Omnireports2\bin\Release\ReportesPotosinos.pdb
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesPotosinos\Reportes-Potosinos\Omnireports2\obj\x86\Release\ReportesPotosinos.Properties.Resources.resources
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesPotosinos\Reportes-Potosinos\Omnireports2\obj\x86\Release\Omnireports2.Vistas.formReporteDeCirculoDeServicio.resources
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesPotosinos\Reportes-Potosinos\Omnireports2\obj\x86\Release\Reportes Potosinos.csproj.GenerateResource.Cache
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesPotosinos\Reportes-Potosinos\Omnireports2\obj\x86\Release\ReportesPotosinos.exe
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesPotosinos\Reportes-Potosinos\Omnireports2\obj\x86\Release\ReportesPotosinos.pdb
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesPotosinos\Reportes-Potosinos\Omnireports2\obj\x86\Release\Reportes Potosinos.csprojResolveAssemblyReference.cache
