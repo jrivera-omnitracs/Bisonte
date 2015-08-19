@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ReportesBisonte</name>
+    </assembly>
+    <members>
+        <member name="T:Omnireports2.Vistas.formReporteDeCirculoDeServicio">
+            <summary>
+            Parte 2 de 3 de la clase que gobierna el comportanmiento del formReporteDeCirculoDeServicio
+            </summary>
+            <summary>
+            Parte 1 de 3 de la clase que gobierna el comportanmiento del formReporteDeCirculoDeServicio
+            Hereda de la clase madre Reporte
+            </summary>
+        </member>
+        <member name="T:Omnireports2.Aplicación.Reporte">
+            <summary>
+            Clase padre para los forms de reportes
+            </summary>
+        </member>
+        <member name="M:Omnireports2.Aplicación.Reporte.GetDataToGrid(System.String)">
+            <summary>
+            Se obtienen los datso necesarios para llenar un GataGridView
+            </summary>
+            <param name="consulta">Es la consulta o procedure de la que se van a rcibir datos</param>
+            <returns></returns>
+        </member>
+        <member name="M:Omnireports2.Aplicación.Reporte.ExportarDataGridViewExcel(System.Windows.Forms.DataGridView)">
+            <summary>
+            Se genera un .xlsx a partir de un DataGridView
+            </summary>
+            <param name="grd">Data Grid View que será convertido a un archivo excel (.xlsx)</param>
+        </member>
+        <member name="F:Omnireports2.Vistas.formReporteDeCirculoDeServicio.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Omnireports2.Vistas.formReporteDeCirculoDeServicio.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Omnireports2.Vistas.formReporteDeCirculoDeServicio.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Omnireports2.Vistas.formReporteDeCirculoDeServicio.dtInicio">
+            <summary>
+            fechas de inicio y fin de la consulta
+            </summary>
+        </member>
+        <member name="F:Omnireports2.Vistas.formReporteDeCirculoDeServicio.dtFin">
+            <summary>
+            fechas de inicio y fin de la consulta
+            </summary>
+        </member>
+        <member name="F:Omnireports2.Vistas.formReporteDeCirculoDeServicio.grupoDeUnidades">
+            <summary>
+            grupo de unidades en la consulta
+            </summary>
+        </member>
+        <member name="F:Omnireports2.Vistas.formReporteDeCirculoDeServicio.strAux_Procedure">
+            <summary>
+            string que será llenado con el procedure que se quiere realizar
+            </summary>
+        </member>
+        <member name="F:Omnireports2.Vistas.formReporteDeCirculoDeServicio.economico">
+            <summary>
+            economico del cual se generarán los reportes
+            </summary>
+        </member>
+        <member name="F:Omnireports2.Vistas.formReporteDeCirculoDeServicio.sucursal">
+            <summary>
+            sucursal de la cual se registran las entradas y salidas
+            </summary>
+        </member>
+        <member name="M:Omnireports2.Vistas.formReporteDeCirculoDeServicio.#ctor">
+            <summary>
+            Al contruir el objeto, los objetos dateTimePicker tienen la fecha del día en curso,
+            para evitar que el usuario vea una pantalla vacia, al momento de abrir la herramienta se
+            llenará el primer Data Grid View que el usuario observa.
+            </summary>
+        </member>
+        <member name="M:Omnireports2.Vistas.formReporteDeCirculoDeServicio.btnGenerar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Al seleccionar el botón generar, se pregunta por el Data Grid View (DGV) activo
+            y se genera un llama al método ExportarDataGridViewExcel para generar un
+            archivo excel con la información del DGV
+            </summary>
+        </member>
+        <member name="M:Omnireports2.Vistas.formReporteDeCirculoDeServicio.dtpInicio_ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Al detectar un cambio en las fechas y limita al usuario a introducir fechas válidas 
+            para los rangos de fechas. Asi mismo actualiza el valor de fecha que después será
+            utilizado para generar los Data Grid View.
+            
+            Este método se aplica en específico a fecha de inicio
+            </summary>
+        </member>
+        <member name="M:Omnireports2.Vistas.formReporteDeCirculoDeServicio.dtpFin_ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Al detectar un cambio en las fechas y limita al usuario a introducir fechas válidas 
+            para los rangos de fechas. Asi mismo actualiza el valor de fecha que después será
+            utilizado para generar los Data Grid View.
+            
+            Este método se aplica en específico a fecha de fin
+            </summary>
+        </member>
+        <member name="M:Omnireports2.Vistas.formReporteDeCirculoDeServicio.tabControl1_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Al detectar que el usuari selecciona una pestaña distinta a la que se encuentra carga 
+            únicamente los datos en el Data Grid View de esa pestña en específico. Esto permite que 
+            la carga del sistema sea más ágil.
+            </summary>
+        </member>
+        <member name="M:Omnireports2.Vistas.formReporteDeCirculoDeServicio.btnActualizar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Cuando el usuaio cambia los parámetros para la generación de reportes (fecha inicio, 
+            fecha fin, grupo o económico) deberá dar click en el botón de actualizar para que el 
+            Data Grid View que está visualizando se actualice.
+            </summary>
+        </member>
+        <member name="M:Omnireports2.Vistas.formReporteDeCirculoDeServicio.ActualizarGirdView(System.Windows.Forms.DataGridView,System.String)">
+            <summary>
+            ACTUALIZA EL CONTENIDO DE UN DATA GRIDVIEW
+            </summary>
+            <param name="dgvAuxiliar">Se pasa la referencia del objeto Data Grid View (DGV) que se quiere actualizar</param>
+            <param name="procedure"> Se pasa el procedimiento con el cual se planea llenar el DGV</param>
+        </member>
+        <member name="M:Omnireports2.Vistas.formReporteDeCirculoDeServicio.EnableGrupoUnidades(System.String)">
+            <summary>
+            Fragmento del builder de la cadena de query para generar un 
+            reporte por grupo de unidades
+            </summary>
+            <param name="grupo">grupo de unidades sobre el que se generará 
+            la consulta</param>
+        </member>
+        <member name="M:Omnireports2.Vistas.formReporteDeCirculoDeServicio.SetEconomico">
+            <summary>
+            Setter de el miembro de la clase economico con el formato correto para hacer la consulta
+            </summary>
+        </member>
+        <!-- El comentario XML con formato incorrecto se omite para el miembro "P:Omnireports2.Vistas.formReporteDeCirculoDeServicio.Sucursal" -->
+        <!-- El comentario XML con formato incorrecto se omite para el miembro "P:Omnireports2.Vistas.formReporteDeCirculoDeServicio.DtFin" -->
+        <!-- El comentario XML con formato incorrecto se omite para el miembro "P:Omnireports2.Vistas.formReporteDeCirculoDeServicio.DtInicio" -->
+        <!-- El comentario XML con formato incorrecto se omite para el miembro "P:Omnireports2.Vistas.formReporteDeCirculoDeServicio.GrupoDeUnidades" -->
+        <!-- El comentario XML con formato incorrecto se omite para el miembro "P:Omnireports2.Vistas.formReporteDeCirculoDeServicio.Economico" -->
+        <member name="T:Omnireports2.Persistencia.Contract">
+            <summary>
+            Se utiliza una clase contract que tendrá la definicioón de los strings necesarios
+            para hacer query's a la base de datos.
+            
+            Los miembros son definidos de tipo public static para ser alcanzado por toda la solución. 
+            </summary>
+        </member>
+        <member name="T:Omnireports2.Persistencia.Contract.KilometrosRecorridos">
+            <summary>
+            Clase específica para tratar los datos de Kilometros recorridos
+            </summary>
+        </member>
+        <member name="F:Omnireports2.Persistencia.Contract.KilometrosRecorridos.spKilometrosRecorridos">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Omnireports2.Persistencia.Contract.RendimientoCombustible">
+            <summary>
+            Clase específica para tratar los datos del Rendimiento de Combustible
+            </summary>
+        </member>
+        <member name="F:Omnireports2.Persistencia.Contract.RendimientoCombustible.spRendimiento">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Omnireports2.Persistencia.Contract.CirculoDeServicio">
+            <summary>
+            Clase específica para tratar los datos de Circulo De Servicio
+            </summary>
+        </member>
+        <member name="F:Omnireports2.Persistencia.Contract.CirculoDeServicio.spCirculoDeServicio">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Omnireports2.Persistencia.Contract.ExcesoDeVelocidad">
+            <summary>
+            Clase específica para tratar los datos de Exceso de velocidad
+            </summary>
+        </member>
+        <member name="F:Omnireports2.Persistencia.Contract.ExcesoDeVelocidad.spExcesoDeVelocidad">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Omnireports2.Persistencia.Contract.FrenadasBruscas">
+            <summary>
+            Clase específica para tratar los datos de Frenadas Bruscas
+            </summary>
+        </member>
+        <member name="F:Omnireports2.Persistencia.Contract.FrenadasBruscas.spFrenadasBruscas">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Omnireports2.Persistencia.Contract.EntradasYSalidasDeSucursal">
+            <summary>
+            Clase específica para tratar las Entradas y Salidas de sucursales
+            </summary>
+        </member>
+        <member name="F:Omnireports2.Persistencia.Contract.EntradasYSalidasDeSucursal.spEntradasYSalidas">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Omnireports2.Persistencia.Contract.EntradasYSalidasDeSucursal.qGetSucursales">
+            <summary>
+            Query con el que se obtendrá la información para llenar el cbSucursales
+            </summary>
+        </member>
+        <member name="T:Omnireports2.Persistencia.Contract.Estadisticas">
+            <summary>
+            Clase especifica para obtener los datos de estadísticas
+            </summary>
+        </member>
+        <member name="F:Omnireports2.Persistencia.Contract.Estadisticas.spEstadisticas">
+            <summary>
+            Query con el que se obtendrá la información para llenar el dgv Estadicticas
+            </summary>
+        </member>
+        <member name="T:Omnireports2.Persistencia.Contract.GraficaCombustible">
+            <summary>
+            Clase especifica para obtener datos necesarios para generar una gráfica
+            </summary>
+        </member>
+        <member name="F:Omnireports2.Persistencia.Contract.GraficaCombustible.spDatosCombustible">
+            <summary>
+            Query con el que se obtendrá la información para generar la grafica (chart)
+            </summary>
+        </member>
+        <member name="T:Omnireports2.Persistencia.DatabaseHelper">
+            <summary>
+            Esta clase es utilizada como un helper para apoyar en la realización de operaciones
+            CRUD además de la operación login
+            </summary>
+        </member>
+        <member name="M:Omnireports2.Persistencia.DatabaseHelper.execSPCreate(System.String)">
+            <summary>
+            Se utiliza para la inserción de un dato en la base de datos.
+            Es static para que no necesite ser instanciado el objeto.
+            </summary>
+            <param name="sp">El procedure con el cual se realizará una inserción en la 
+            base de datos.</param>
+        </member>
+        <member name="M:Omnireports2.Persistencia.DatabaseHelper.execSPRead(System.String)">
+            <summary>
+            Se utiliza para una selección a la base de datos.
+            Es static para que no necesite ser instanciado el objeto.
+            </summary>
+            <param name="sp">El sp con el cual se realizan las consultas.</param>
+            <returns>Un objeto tipo Data Table con la información obtenida.
+            Este objeto puede ser utilizado para llenar un Data Grid View o
+            utilizado de otras formas.
+            </returns>
+        </member>
+        <member name="M:Omnireports2.Persistencia.DatabaseHelper.execSPUpdate(System.String)">
+            <summary>
+            Se utiliza para la actualización de la base de datos.
+            Es static para que no necesite ser instanciado el objeto.
+            </summary>
+            <param name="sp">El sp con el cual se realizan las actualizaciones.</param>
+        </member>
+        <member name="M:Omnireports2.Persistencia.DatabaseHelper.execSPDelete(System.String)">
+            <summary>
+            Se utiliza para la eliminación de la base de datos.
+            Es static para que no necesite ser instanciado el objeto.
+            </summary>
+            <param name="sp">El sp con el cual se realizan las eliminaciones de registros.</param>
+        </member>
+        <member name="M:Omnireports2.Persistencia.DatabaseHelper.execSPLogin(System.String)">
+            <summary>
+            Se utiliza para realizar un login en casi de haber una tabla de usuarios
+            </summary>
+            <param name="sp">Recibe el sp o consulta para realizar una autenticación 
+            del usuario en la BD</param>
+            <returns>Valor boolean. True si existe el ususario y las credenciales son correctas.
+            False en caso contrario</returns>
+        </member>
+        <member name="F:Omnireports2.Form1.components">
+            <summary>
+            Variable del diseñador requerida.
+            </summary>
+        </member>
+        <member name="M:Omnireports2.Form1.Dispose(System.Boolean)">
+            <summary>
+            Limpiar los recursos que se estén utilizando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben eliminar; false en caso contrario, false.</param>
+        </member>
+        <member name="M:Omnireports2.Form1.InitializeComponent">
+            <summary>
+            Método necesario para admitir el Diseñador. No se puede modificar
+            el contenido del método con el editor de código.
+            </summary>
+        </member>
+        <member name="T:ReportesPotosinos.Properties.Resources">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:ReportesPotosinos.Properties.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:ReportesPotosinos.Properties.Resources.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+        <member name="T:Omnireports2.Persistencia.Connection">
+            <summary>
+            Administa las conexiones a la base de datos
+            </summary>
+        </member>
+        <member name="M:Omnireports2.Persistencia.Connection.GetDBConnection">
+            <summary>
+            Se genera una conexión a la base de datos
+            </summary>
+            <returns>Una conección a la base de datos</returns>
+        </member>
+        <member name="M:Omnireports2.Program.Main">
+            <summary>
+            Punto de entrada principal para la aplicación.
+            </summary>
+        </member>
+    </members>
+</doc>
