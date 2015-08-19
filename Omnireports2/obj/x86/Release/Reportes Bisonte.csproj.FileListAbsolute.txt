@@ -1,0 +1,8 @@
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesBisonte\Bisonte\Omnireports2\bin\Release\ReportesBisonte.exe.config
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesBisonte\Bisonte\Omnireports2\bin\Release\ReportesBisonte.exe
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesBisonte\Bisonte\Omnireports2\bin\Release\ReportesBisonte.pdb
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesBisonte\Bisonte\Omnireports2\obj\x86\Release\ReportesPotosinos.Properties.Resources.resources
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesBisonte\Bisonte\Omnireports2\obj\x86\Release\Omnireports2.Vistas.formReporteDeCirculoDeServicio.resources
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesBisonte\Bisonte\Omnireports2\obj\x86\Release\Reportes Bisonte.csproj.GenerateResource.Cache
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesBisonte\Bisonte\Omnireports2\obj\x86\Release\ReportesBisonte.exe
+C:\Users\Portatil en Stock 23\Documents\GitHub\ReportesBisonte\Bisonte\Omnireports2\obj\x86\Release\ReportesBisonte.pdb
