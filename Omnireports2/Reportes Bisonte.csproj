@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>res\logo-potosinos.ico</ApplicationIcon>
+    <ApplicationIcon>logo-bisonte.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
@@ -129,7 +129,8 @@
     <Folder Include="Aplicación\Gráficas\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="res\logo-potosinos.ico" />
+    <Content Include="logo-bisonte.ico" />
+    <Content Include="res\logo-bisonte.ico" />
     <Content Include="res\logo-omnitracs.png" />
     <Content Include="res\qtracs.ico" />
     <Content Include="res\reload %282%29.png" />

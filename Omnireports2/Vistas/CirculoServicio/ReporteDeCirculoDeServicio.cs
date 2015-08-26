@@ -97,11 +97,7 @@ namespace Omnireports2.Vistas
             GrupoDeUnidades = Economico = "NULL";
 
             //Se llena el primer dta grid View que vera el usuario
-            ActualizarGirdView(datagvExcesosVelocidad, "sp_recorridos"
-                    + " '" + DtInicio.ToString("yyyyMMdd HH:mm") + "' , "
-                    + "'" + DtFin.ToString("yyyyMMdd HH:mm") + "' , "
-                    + "null" + ","
-                    + "null");
+            tabControl1_SelectedIndexChanged(this, null);
         }
 
         /// <summary>
